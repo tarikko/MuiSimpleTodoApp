@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+html, body, #root {
+    height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+    padding: 10px !important;
+    margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
-.App-link {
-  color: #61dafb;
+.TodoInput {
+    border-radius: 30px 30px 0px 0px;
+    padding: 0px 15px;
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    flex: 0.15 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TodoInput > div:nth-child(1) {
+    flex: 2;
+}
+.TodoInput > div:nth-child(1) > div {
+    width: 100%;
+}
+.TodoList {
+    flex: 0.85 0;
+    overflow: auto;
+}
+.TodoElement {
+    width: 100%;
+    background-color: white;
+    word-wrap: break-word;
+    border-radius: 15px;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.TodoElement > li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+.TodoElement > li > div:nth-child(2) {
+    flex: 2 0;
+    word-break: break-all;
+}
+.TodoElement > li > div:nth-child(3), .TodoInput > div:nth-child(2) {
+    display: flex;
+    flex: 0.25;
+    justify-content: space-around;
 }
